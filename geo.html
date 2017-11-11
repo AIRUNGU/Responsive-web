@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="leaflet/leaflet.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="leaflet/leaflet.js"></script>
+	<script type="text/javascript" src="data/state.geojson"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/wow.min.js"></script>
+	<!-- <script type="text/javascript" src="data/county.geojson"></script> -->
+</head>
+<body>
+
+<!--NAVIGATION -->
+<div id="mynav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand"><img src="images/icon.svg"></a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Team</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!--END OF NAVIGATION-->
+
+<!--HEADER-->
+<div class="header" class="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12 wow bounceInLeft">
+				<h1>Welcome to Kimathi@developers group</h1>
+				<p>Here we specify 16 as the maximum zoom when setting the map view automatically. As soon as the user agrees to share its location and it’s detected by the browser, the map will set the view to it. Now we have a working fullscreen mobile map! But what if we need to do something after the geolocation completed? Here’s what the locationfound and locationerror events are for. Let’s for example add a marker in the detected location, showing accuracy in a popup, by adding an event listener to locationfound event before the locateAndSetView call</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 wow bounceInRight">
+				<img src="img/q.jpg">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--MAP-->
+
+<div class="mapid" id="mapid">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div id="map"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--END OF MAP -->
+
+<!--SERVICES-->
+<div id="services" class="services">
+	<div class="container">
+		<div class="row">
+		<h2>SERVICES</h2>
+		<P>Since we are working with the JavaScript, you can serve your app on any web browser.
+			This will speed up your building process, but you should always test your app on native
+			emulators and devices. Type the following code to serve your app on the web browser.</P>
+			
+				<div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-delay='1.8s'>
+					<i class="fa fa-desktop" aria-hidden="true"></i>
+					<h4>Computers</h4>
+					<p>This will speed up your building process, but you should always test your app on native
+						emulators and devices. Type the following code to serve your app on the web browser</p>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-delay='1.4s'>
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					<h4>Mobile Apps</h4>
+					<p>This will speed up your building process, but you should always test your app on native
+						emulators and devices. Type the following code to serve your app on the web browser</p>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-delay='0.8s'>
+					<i class="fa fa-database" aria-hidden="true"></i>
+					<h4>Databases</h4>
+					<p>This will speed up your building process, but you should always test your app on native
+						emulators and devices. Type the following code to serve your app on the web browser</p>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-delay='0.4s'>
+					<i class="fa fa-university" aria-hidden="true"></i>
+					<h4>Consultant</h4>
+					<p>This will speed up your building process, but you should always test your app on native
+						emulators and devices. Type the following code to serve your app on the web browser</p>
+				</div>
+			</div>
+	</div>
+</div>
+
+<!--END OF SERVICES -->
+
+<!--PRICING-->
+
+<div class="pricing" id="pricing">
+	<div class="container" >
+		<div class="row">
+			<h2>Pricing</h2>
+			<p>This will speed up your building process, but you should always test your app on native</p>
+			<div class="col-lg-3 col-md-3 col-md-12 wow flipInY" data-wow-delay='0.2s'>
+				<div class="packages">
+					<h4>Premium</h4>
+					<h1>9.999</h1>
+					<p>This will speed up your building process</p>
+					<hr>
+					<li>100 users</li>
+					<li>Usl member</li>
+					<li>Online supprt</li>
+					<li>300 GB free</li>
+					<button class="btn btn-success"> Get started</button>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-md-12 wow flipInY" data-wow-delay='0.3s'>
+				<div class="packages">
+					<h4>Bronze</h4>
+					<h1>12.999</h1>
+					<p>This will speed up your building process</p>
+					<hr>
+					<li>100 users</li>
+					<li>Usl member</li>
+					<li>Online supprt</li>
+					<li>300 GB free</li>
+					<button class="btn btn-success"> Get started</button>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-md-12 wow flipInY" data-wow-delay='0.7s'>
+				<div class="packages">
+					<h4>Silver</h4>
+					<h1>39.99</h1>
+					<p>This will speed up your building process</p>
+					<hr>
+					<li>100 users</li>
+					<li>Usl member</li>
+					<li>Online supprt</li>
+					<li>300 GB free</li>
+					<button class="btn btn-success"> Get started</button>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-md-12 wow flipInY" data-wow-delay='0.8s'>
+				<div class="packages">
+					<h4>Gold</h4>
+					<h1>16.99</h1>
+					<p>This will speed up your building process</p>
+					<hr>
+					<li>100 users</li>
+					<li>Usl member</li>
+					<li>Online supprt</li>
+					<li>300 GB free</li>
+					<button class="btn btn-success"> Get started</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--END OF PRICING-->
+
+<div class="team" id="team">
+	<div class="container">
+		<div class="row">
+			<h2>Meet our team</h2>
+			<div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-delay='1.8s'>
+				<img src="img/n.jpg" class="img-circle">
+				<h4>Ayub Ndururi</h4>
+				<b>CEO and Founder</b>
+				<p>Embrassing power of spatial objects</p>
+				<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-delay='1.4s'>
+				<img src="img/n.jpg" class="img-circle">
+				<h4>Ayub Ndururi</h4>
+				<b>CEO and Founder</b>
+				<p>Embrassing power of spatial objects</p>
+				<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-delay='0.8s'>
+				<img src="img/n.jpg" class="img-circle">
+				<h4>Ayub Ndururi</h4>
+				<b>CEO and Founder</b>
+				<p>Embrassing power of spatial objects</p>
+				<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-12 wow fadeInLeft" data-wow-delay='0.4s'>
+				<img src="img/n.jpg" class="img-circle">
+				<h4>Ayub Ndururi</h4>
+				<b>CEO and Founder</b>
+				<p>Embrassing power of spatial objects</p>
+				<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--END OF TEAM-->
+<div class="contact" id="contact">
+	<div class="container">
+		<div class="row">
+			<h2>Contacts</h2>
+			<p>This will speed up your building process, but you should always test your app on native
+			emulators and devices. Type the following code to serve your app on the web browser </p>
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='0.4s'>
+					<span class="input-group-addon" id="sizing-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+					<input type="text" name="" class="form-control" aria-describedby="sizing-addon1" placeholder="Full Name">
+				</div>
+				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='0.8s'>
+					<span class="input-group-addon" id="sizing-addon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+					<input type="text" name="" class="form-control" aria-describedby="sizing-addon1" placeholder="Email Address">
+				</div>
+				<div class="input-group input-group-lg wow fadeInUp" data-wow-delay='1.2s'>
+					<span class="input-group-addon" id="sizing-addon1"><i class="fa fa-phone" aria-hidden="true"></i></span>
+					<input type="text" name="" class="form-control" aria-describedby="sizing-addon1" placeholder="Phone">
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<div class="input-group wow fadeInUp" data-wow-delay='1.6s'>
+					<textarea class="form-control" id="" cols="80" rows="6"></textarea>
+				</div>
+				<button class="btn btn-success btn-lg wow fadeInUp" data-wow-delay='2s'>Submit your message</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+		var mapOptions = {
+		center:[51.055207338584964,10.72265625],
+		zoom:6
+	}
+	//creating mao object
+	var map = new L.map('map', mapOptions);
+	//creating a layer object
+	var layer = new L.tileLayer('http://server.arcgisonline.com/ArcGis/rest/services/World_Imagery/Mapserver/tile/{z}/{y}/{x}');
+	var layer1 = new L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+	//adding layer to map
+	map.addLayer(layer1);
+
+	 var marker = new L.Marker([51.055207338584964,10.72265625]);
+	 marker.addTo(map);
+	 function GetColor(pop){
+	 	if(pop>10000000){
+	 		return "brown";
+	 	}else if(pop>5000000){
+	 		return "blue";
+	 	}else if(pop>2000000){
+	 		return "lime";
+	 	}else{
+	 		return "orange";
+	 	}
+	 }
+	 function StateStyle(feature){
+	 	return{
+	 		fillColor:GetColor(feature.properties.population) ,
+	 		weight: 2,
+	 		opacity: 1,
+	 		color:"white",
+	 		dashArray:4,
+	 		fillOpacity:0.9,
+	 	}
+	 }
+
+	 var stateslayer = L.geoJson(states, {style:StateStyle}).addTo(map);
+	 // var countylayer = L.geoJson(counties).addTo(map);
+
+	 var legend = new L.control({position:"bottomright"});
+	 legend.onAdd = function(map){
+	 	var div = L.DomUtil.create('div','legend');
+	 	var labels = [
+	 		'Population greater than 10000000',
+	 		'Population greater than 5000000',
+	 		'Population greater than 2000000',
+	 		'Population equal or less than 2000000',
+	 	];
+	 	var grades = [10000001,5000001,2000001,2000000];
+	 	div.innerHTML = '<div><b>German Popolation</b></div>';
+	 	for(var i = 0; i<grades.length; i++){
+	 		div.innerHTML+='<i style="background:'
+	 		 + GetColor(grades[i]) + '">&nbsp;&nbsp; </i> &nbsp;&nbsp;' 
+	 		 + labels[i]+'<br/>';
+	 	}
+	 	return div;
+	 }
+	 legend.addTo(map);
+
+	 map.on('click',function(e){
+	 	new L.Marker([e.latlng.lat,e.latlng.lng]);
+	 	alert(e.latlng.lat+","+e.latlng.lng)
+	 });
+	 //https://askubuntu.com/questions/490950/create-wifi-hotspot-on-ubuntu
+	</script>
+	<div class="row"></div>
+
+	 <script src="js/wow.min.js"></script>
+       	<script>
+              new WOW().init();
+    	</script>
+</body>
+</html>
